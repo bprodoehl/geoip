@@ -3,4 +3,5 @@
 set -e
 
 cd /app/geoip
-node app.js 2>&1
+node ./bin/www 2>&1
+

@@ -28,6 +28,7 @@ RUN mkdir -p /app/geoip
 WORKDIR /app/geoip
 ADD app/ /app/geoip/
 RUN npm install && npm dedupe
+RUN cd node_modules/geoip-lite && npm run-script updatedb
 
 # expose the necessary ports
 EXPOSE 80
