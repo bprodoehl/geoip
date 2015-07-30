@@ -30,5 +30,8 @@ ADD app/ /app/geoip/
 RUN npm install && npm dedupe
 RUN cd node_modules/geoip-lite && npm run-script updatedb
 
+ENV PORT 80
+ENV NODE_ENV production
+
 # expose the necessary ports
 EXPOSE 80
