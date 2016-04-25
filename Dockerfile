@@ -2,9 +2,9 @@
 
 # GeoIP Server
 #
-# VERSION               0.0.1
+# VERSION               0.0.2
 
-FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage:0.9.18
 MAINTAINER Brian Prodoehl <bprodoehl@connectify.me>
 
 ENV HOME /root
@@ -14,7 +14,7 @@ CMD ["/sbin/my_init"]
 RUN apt-get -q update && apt-get dist-upgrade -y -q
 
 # install Node.js
-ENV NODE_VERSION 0.12.7
+ENV NODE_VERSION 0.12.13
 RUN cd /usr/local && \
     curl -sL http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz | \
     tar --strip-components 1 -xz
